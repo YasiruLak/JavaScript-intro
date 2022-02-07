@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello JS</title>
+</head>
+<body>
+<h1>Hello JS</h1>
+
+
+<script>
+  /*we can write java script here in the index file*/
+  /*document.getElementById("");*/
+
+  // print a out put
+  // alert("Hello");
+  // console.log("Hello JS, Im from Internal Script");
+
+  /* comments in js */
+
+  // single line comments
+  /*  Multi
+      Line
+      Comments*/
+
+  //=====================================================
+
+  // Variables in JS
+
+  /*
+   Strong Type Language
+   int i =10;
+   String s = "Hello there";*/
+
+
+  // What about js..?
+  // Loose/Loosely  type
+
+  // var cusName = "Dasun";
+
+  //Then why is it dynamic typing..?
+  /*dynamically change its type to what we assign*/
+
+  // var customerID = "C001";
+  // typeof customerID
+  // // 'string'
+  //
+  // customerID = true;
+  // typeof customerID
+  // // 'boolean'
+  //
+  // customerID = 10;
+  // typeof customerID;
+  // // 'number'
+  //
+  // customerID = "C001";
+  // typeof cusName;
+  // // 'string'
+
+  //=====================================================
+
+  /* problems in var */
+  // var cusName = "Dasun";
+  //
+  // var cusName = "Kamal"; // can duplicate identifiers
+  // console.log(cusName);
+  //
+  // {
+  //     var cusAddress = "Galle";
+  //     console.log("Inside Scope " + cusAddress);
+  //     console.log("Inside Scope " + cusName);
+  // }
+  //
+  // console.log("OutSide Scope " + cusAddress); //no scope
+
+
+  //=======================================================
+
+  /*let - declaration type like var*/
+  // {
+  //     let customerID = 'C001';
+  //     console.log(customerID);
+  // }
+  // console.log(customerID);// let think about scopes
+
+  // let abc=100;
+  // let abc=100;// cannot duplicate the same identifier
+
+  /*  what about dynamic typing in let*/
+  // var customerID = "C001";
+  // typeof customerID;
+  // // 'string'
+  //
+  // customerID = 100;
+  // typeof customerID;
+  // // 'number'
+  //
+  // let customerName = "Dasun";
+  // typeof customerName;
+  // // 'string'
+  //
+  // customerName = true;
+  // typeof customerName;
+  // // 'boolean'
+
+  /*Dynamic type support*/
+
+  //=====================================================
+  /*const variables - read only values */
+
+  // const CUSTOMER_ADDRESS; // no
+
+  //const CUSTOMER = "ABCD";
+  //console.log(CUSTOMER);
+
+  //const A = 10;
+  //const A = 10;//cannot duplicate
+
+  /*   scope..?*/
+  // {
+  //     const A = 10;
+  //
+  // }
+  // console.log(A);// not working
+
+
+  /*dynamic typing*/
+  // const CUSTOMER_NAME = "DASUN";
+  // typeof CUSTOMER_NAME; // string
+  //
+  // CUSTOMER_NAME = 10; // not working
+
+  //=====================================================
+  /*
+  * case sensitive
+  * can we start a identifier from a number
+  * _, $
+  * */
+
+  /* var name="Dasun";
+   var Name="Kamal";
+   console.log(name);
+   console.log(Name);
+
+   let address="Galle";
+   let Address="Panadura";
+   console.log(address)
+   console.log(Address);
+
+   //first letter should be a-z or _ or $
+   // we can use numbers after that
+   //let 0myName=100;//wrong
+   let my9Name="Dasun";//ok
+   let _my9Name="Dasun";//ok
+   let $my9Name="Dasun";//ok*/
+
+
+  //=====================================================
+
+  // JS Data Types
+  /*   6 Primitive */
+  // String *
+  // Number *
+  // Boolean *
+  // Undefined *
+  // BigInt *
+  // Symbol
+
+  /*Structural Types*/
+  // Objects
+  // Functions
+
+
+  /*Structural Root Primitive*/
+  // Null *
+
+
+  /*    Number*/
+  // Numbers
+  /* decimal
+   binary - 0b or 0B
+   octal - 0
+   hexadecimal - 0x
+   floating point* 7.9 */
+
+  /* var age=10;
+   var height=10.2;
+   console.log(typeof age); //number
+   console.log(typeof height);//number
+
+   var max= Number.MAX_SAFE_INTEGER; // we can get max safe integer via this
+   // if we want to store larger number than this we can use bigint
+
+   console.log(typeof  max);
+
+   var number=1000n; // get 1000 from big int
+   console.log(typeof number);//bigint*/
+
+
+
+  /* String data type*/
+
+  // var string1 = 'Hello';
+  // var string2 = "Hello";
+  // console.log(typeof string1);
+  // console.log(typeof string2);
+  //
+  // console.log(string1+string2);
+  // console.log(1+string2);
+  //
+  // //String literals
+  // var age=30;
+  // console.log("My age is " +age+ " year old");
+  // console.log(`My age is ${age} year old`);
+
+
+  // String related methods
+  //length
+  //toUpperCase
+  //toLowerCase
+  //trimLeft
+  //trimRight
+  //trim
+  //split
+  //charAt
+  //charCodeAt
+  //indexOf
+  //substr
+  //substring
+
+  // var string="        Ijse,    ";
+  // var string1="IJSE,CMJD,GDSE,RWAD";
+  // var string2="Helloo There How are you..?";
+  // console.log( string.length);
+  // console.log( string.toUpperCase());
+  // console.log( string.toLowerCase());
+  // console.log( string.trimLeft());
+  // console.log( string.trimRight());
+  // console.log( string.trim());
+  // console.log( string1.split(","));
+  // console.log( string2.charAt(1)); // return character at the index number
+  // console.log( string2.charCodeAt(2)); // return ascii code of the index number
+  // console.log( string2.indexOf("o")); // return the first index number of maching charactor
+  // console.log( string2.substr(4,5));// from to length
+  // console.log( string2.substring(4,5)); // start number and end number
+
+  //================================================================
+
+  /*  Boolean Data Type*/
+  // var b1=true;
+  // var b2=false;
+
+
+  /*Null and Undefined*/
+  /*Why we want undefined..?*/
+  var myName; // if we declare something like this. there is no data type for myName because js is not Strong type language
+  typeof myName; // so this represent undefined data type because it is not defined and initialized
+
+
+  /*Then what about null..?*/
+  var myAddress = null; // we can use null when there is no value for the variable but we want to initialize it
+  typeof myAddress; //object
+
+
+  /* Flow Control Structures*/
+  // if , else if , switch
+  if (true) {
+    console.log("Hello");
+  }
+
+
+</script>
+<!--<script src="assests/js/script.js"></script>-->
+</body>
+</html>
