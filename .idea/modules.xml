@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/06_JS_Events/06_JS_Events.iml" filepath="$PROJECT_DIR$/06_JS_Events/06_JS_Events.iml" />
       <module fileurl="file://$PROJECT_DIR$/07_JS_Timer/07_JS_Timer.iml" filepath="$PROJECT_DIR$/07_JS_Timer/07_JS_Timer.iml" />
       <module fileurl="file://$PROJECT_DIR$/08_JQuery_UI/08_JQuery_UI.iml" filepath="$PROJECT_DIR$/08_JQuery_UI/08_JQuery_UI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/09_JQuery_Plugin/09_JQuery_Plugin.iml" filepath="$PROJECT_DIR$/09_JQuery_Plugin/09_JQuery_Plugin.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaScript-intro.iml" filepath="$PROJECT_DIR$/JavaScript-intro.iml" />
     </modules>
   </component>
