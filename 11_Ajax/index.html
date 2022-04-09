@@ -15,32 +15,48 @@
 <script>
     $("#btn").click(function () {
 
-        console.log("Request Started")
-        let http = new XMLHttpRequest();
-        console.log(http.readyState, "After the XMLHttpRequest Object Created");
+        let request = new XMLHttpRequest();
 
+        request.open("GET", "db/db.text");
+        request.send();
 
-        http.open("GET", "db/db.text");
+        request.onreadystatechange = function () {
+            request.readyState;
+            request.status;
 
-
-        console.log(http.readyState, "After the open method invoked");
-        console.log(http.responseText);
-        console.log(http.readyState, "After the response text printed");
-
-
-        http.send();
-        console.log(http.readyState, "After the send method is invoked");
-
-        //when the requests status are changed... please run this
-        http.onreadystatechange = function () {
-            console.log(http.readyState, "Inside on ready event ");
-
-
+            if (request.readyState == 4 && request.status == 200) {
+                $("#display").text(request.responseText);
+            }
         }
 
-        console.log("Request Finished")
-
     });
+
+    // console.log("Request Started")
+    // let http = new XMLHttpRequest();
+    // console.log(http.readyState, "After the XMLHttpRequest Object Created");
+    //
+    //
+    // http.open("GET", "db/db.text");
+    //
+    //
+    // console.log(http.readyState, "After the open method invoked");
+    // console.log(http.responseText);
+    // console.log(http.readyState, "After the response text printed");
+    //
+    //
+    // http.send();
+    // console.log(http.readyState, "After the send method is invoked");
+    //
+    // //when the requests status are changed... please run this
+    // http.onreadystatechange = function () {
+    //     console.log(http.readyState, "Inside on ready event ");
+    //
+    //
+    // }
+    //
+    // console.log("Request Finished");
+
+
 </script>
 </body>
 </html>
