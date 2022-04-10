@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX With JQuery</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<h1>Hello AJAX....</h1>
+<p id="display1"></p>
+<button id="btn1">Send Request To File</button>
+
+<h1>Hello AJAX....</h1>
+<p id="display2"></p>
+<button id="btn2">Send Request To XML</button>
+
+<table class="table table-bordered table-hover">
+    <thead class="bg-primary text-white">
+    <tr>
+        <th>Customer ID</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Salary</th>
+    </tr>
+    </thead>
+    <tbody id="tblCustomerXml">
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    </tbody>
+</table>
+
+
+<script src="assets/jQuery/jquery-3.6.0.min.js"></script>
+<script>
+    $("#btn1").click(function () {
+        $.ajax({
+            url: "db/db.text",
+            success: function (resp) {
+                $("#display1").text(resp);
+                console.log(resp);
+
+            },
+
+            error: function (xhr) {
+                console.log(xhr);
+            }
+        });
+    });
+
+    $("#btn2").click(function () {
+        $("#tblCustomerXml").empty();
+        $.ajax({
+            url: "db/db.xml",
+            success: function (resp) {
+                $("#display2").text(resp);
+                console.log(resp);
+
+                let ob = $(resp);
+                console.log(ob.children().children()); // get the customer count
+
+                // Run a for loop to the customer count and Browse and Print Customer Records to the table
+                for (let i = 0; i < ob.children().children().length; i++) {
+
+                    let id = ob.children().children().eq(i).find("id").text();
+                    let name = ob.children().children().eq(i).find("name").text();
+                    let address = ob.children().children().eq(i).find("address").text();
+                    let salary = ob.children().children().eq(i).find("salary").text();
+
+                    console.log(id, name, address, salary);
+
+                    // create a table row and set values
+                    let row = `<tr><td>${id}</td><td>${name}</td><td>${address}</td><td>${salary}</td></tr>`;
+                    $("#tblCustomerXml").append(row);
+                }
+            },
+
+            error: function (xhr) {
+                console.log(xhr);
+            }
+        });
+    });
+
+</script>
+</body>
+</html>
