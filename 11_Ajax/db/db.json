@@ -3,18 +3,18 @@
     "id": "C001",
     "name": "Yasiru",
     "address": "Galle",
-    "Salary": 1000
+    "salary": 1000
   },
   {
     "id": "C002",
     "name": "Kasun",
     "address": "Panadura",
-    "Salary": 2000
+    "salary": 2000
   },
   {
     "id": "C003",
     "name": "Nimal",
     "address": "Kaluthara",
-    "Salary": 3000
+    "salary": 3000
   }
 ]
