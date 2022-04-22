@@ -6,8 +6,8 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/styles/style.css" rel="stylesheet">
-    <link href="assets/fonts/css/all.min.css" rel="stylesheet">
-    <link href="assets/css/styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://kit.fontawesome.com/cba6695e4b.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <!--Navigation Start-->
@@ -466,54 +466,9 @@
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
 <script src="controller/CustomerController.js"></script>
+<script src="assets/js/js.js"></script>
 <script src="db/DB.js"></script>
 <script src="model/CustomerDTO.js"></script>
-<script>
-
-    // hide all content
-    $("#dashboardContent").css("display", "block");
-    $("#customerContent").css("display", "none");
-    $("#itemContent").css("display", "none");
-    $("#orderContent").css("display", "none");
-
-
-    $("#linkCustomer").click(function () {
-        $("#customerContent").css("display","block");
-        $("#dashboardContent").css("display","none");
-        $("#itemContent").css("display", "none");
-        $("#orderContent").css("display", "none");
-
-    });
-
-    $("#linkItem").click(function (){
-        $("#itemContent").css("display","block");
-        $("#customerContent").css("display","none");
-        $("#dashboardContent").css("display", "none");
-        $("#orderContent").css("display", "none");
-
-    });
-
-
-    $("#linkHome").click(function () {
-        $("#dashboardContent").css("display", "block");
-        $("#itemContent").css("display", "none");
-        $("#customerContent").css("display", "none");
-        $("#orderContent").css("display", "none");
-    });
-
-    $(".link-Order").click(function () {
-        $("#orderContent").css("display", "block");
-        $("#dashboardContent").css("display", "none");
-        $("#itemContent").css("display", "none");
-        $("#customerContent").css("display", "none");
-
-    });
-
-
-
-
-
-</script>
 
 </body>
 </html>
